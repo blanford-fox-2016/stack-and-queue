@@ -1,28 +1,21 @@
 "use strict"
 
-class Queue {
+class Stack {
   constructor(data) {
     this.data = []
-    this.maxSize = 5
+    this.maxSize = 18
   }
 
-  enqueue(x) {
-    if (this.isFull()==="there is space") {
+  push(x) {
+    if (this.isFull() === "there is space") {
         this.data.push(x)
     }else {
-        console.log("data full")
+        return console.log("data full")
     }
   }
 
   pop() {
     this.data.pop()
-  }
-  dequeue(){
-    if (this.isEmpty()==="No") {
-      this.data.splice(0,1)
-    }else {
-      console.log("data empty");
-    }
   }
 
   peek() {
@@ -44,10 +37,10 @@ class Queue {
       return "there is space"
     }
   }
+
 }
-var test = new Queue()
-test.enqueue("aji")
-test.enqueue("aji2")
-test.enqueue("aji3")
-test.enqueue("aji4")
-test.dequeue()
+
+let test = new Stack()
+test.push("aji")
+test.push(2)
+test.push(3)
